@@ -1,0 +1,12 @@
+
+img#meteor-logo {
+    width: 1em;
+    margin: 0 1px 0 3px !important;
+    display: inline;
+    top: -4px;
+    position: relative;
+}
+
+#main-content {
+    margin-top: 50px;
+}
