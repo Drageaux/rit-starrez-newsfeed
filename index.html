@@ -23,19 +23,19 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#teaminfo">
+            <a class="navbar-brand item" data-tab="teaminfo">
                 <span id="navbar-logo" class="logo">
-                    <div class="ui medium inverted header">M E T E<img id="meteor-logo"
-                                                                       src="custom/img/meteor.png">R</div>
+                    <div class="ui medium inverted header">M E T E<img id="meteor-logo" src="custom/img/meteor.png">R
+                    </div>
                 </span>
             </a>
         </div>
         <div class="collapse navbar-collapse" id="collapse-nav">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#teaminfo"><i class="users icon"></i>Team Info</a></li>
-                <li><a href="#fourups"><i class="block layout icon"></i>Four-Ups</a></li>
-                <li><a href="#timesheets"><i class="calendar icon"></i>Timesheets</a></li>
-                <li><a href="#deliverables"><i class="upload icon"></i>Deliverables</a></li>
+                <li><a class="item" data-tab="teaminfo"><i class="users icon"></i>Team Info</a></li>
+                <li><a class="item" data-tab="fourups"><i class="block layout icon"></i>Four-Ups</a></li>
+                <li><a class="item" data-tab="timesheets"><i class="calendar icon"></i>Timesheets</a></li>
+                <li><a class="item" data-tab="deliverables"><i class="upload icon"></i>Deliverables</a></li>
             </ul>
         </div>
     </div>
@@ -43,7 +43,7 @@
 
 <div id="main-content" class="ui container">
     <!--Content goes here-->
-    <section>
+    <section class="ui tab" data-tab="teaminfo">
         <h1 class="ui centered huge header">Team Info</h1>
         <div class="ui two stackable cards">
             <div class="blue card">
@@ -90,6 +90,12 @@
             </div>
         </div>
     </section>
+
+
+    <section class="ui tab" data-tab="fourups"></section>
+    <section class="ui tab" data-tab="timesheets"></section>
+    <section class="ui tab" data-tab="deliverables"></section>
+
 </div>
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"
@@ -99,4 +105,5 @@
 <script async src="bootstrap/js/bootstrap.min.js"></script>
 <script async src="bootstrap/js/jquery.easing.min.js"></script>
 <script async src="bootstrap/js/scrolling-nav.js"></script>
+<script async src="custom/js/main.js"></script>
 </body>
