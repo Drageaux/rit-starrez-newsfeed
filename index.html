@@ -31,7 +31,8 @@
         </div>
         <div class="collapse navbar-collapse" id="collapse-nav">
             <ul class="nav navbar-nav navbar-right menu">
-                <li><a class="item" data-tab="teaminfo"><i class="users icon"></i>Team Info</a></li>
+                <li class="active item" data-tab="overview"><a><i class="home icon"></i>Overview</a></li>
+                <li class="item" data-tab="teaminfo"><a><i class="users icon"></i>Team Info</a></li>
                 <li class="item" data-tab="fourups"><a><i class="block layout icon"></i>Four-Ups</a></li>
                 <li class="item" data-tab="timesheets"><a><i class="calendar icon"></i>Timesheets</a></li>
                 <li class="item" data-tab="deliverables"><a><i class="upload icon"></i>Deliverables</a></li>
@@ -42,7 +43,10 @@
 
 <div id="main-content" class="ui container">
     <!--Content goes here-->
-    <div class="ui  tab" data-tab="teaminfo">
+    <div class="ui active tab" data-tab="overview">
+        <h1 class="ui centered huge header">Project Overview</h1>
+    </div>
+    <div class="ui tab" data-tab="teaminfo">
         <h1 class="ui centered huge header">Team Info</h1>
         <div class="ui two stackable cards">
             <div class="blue card">
