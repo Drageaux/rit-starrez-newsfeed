@@ -7,7 +7,6 @@
 
     <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="bootstrap/css/scrolling-nav.css">
     <link rel="stylesheet" type="text/css" href="custom/css/main.css">
 </head>
 
@@ -31,11 +30,11 @@
             </a>
         </div>
         <div class="collapse navbar-collapse" id="collapse-nav">
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right menu">
                 <li><a class="item" data-tab="teaminfo"><i class="users icon"></i>Team Info</a></li>
-                <li><a class="item" data-tab="fourups"><i class="block layout icon"></i>Four-Ups</a></li>
-                <li><a class="item" data-tab="timesheets"><i class="calendar icon"></i>Timesheets</a></li>
-                <li><a class="item" data-tab="deliverables"><i class="upload icon"></i>Deliverables</a></li>
+                <li class="item" data-tab="fourups"><a><i class="block layout icon"></i>Four-Ups</a></li>
+                <li class="item" data-tab="timesheets"><a><i class="calendar icon"></i>Timesheets</a></li>
+                <li class="item" data-tab="deliverables"><a><i class="upload icon"></i>Deliverables</a></li>
             </ul>
         </div>
     </div>
@@ -43,7 +42,7 @@
 
 <div id="main-content" class="ui container">
     <!--Content goes here-->
-    <section class="ui tab" data-tab="teaminfo">
+    <div class="ui  tab" data-tab="teaminfo">
         <h1 class="ui centered huge header">Team Info</h1>
         <div class="ui two stackable cards">
             <div class="blue card">
@@ -89,21 +88,26 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
 
-    <section class="ui tab" data-tab="fourups"></section>
-    <section class="ui tab" data-tab="timesheets"></section>
-    <section class="ui tab" data-tab="deliverables"></section>
+    <div class="ui tab" data-tab="fourups">
+        <h1 class="ui centered huge header">Four-Ups</h1>
+    </div>
+    <div class="ui tab" data-tab="timesheets">
+        <h1 class="ui centered huge header">Timesheets</h1>
+    </div>
+    <div class="ui tab" data-tab="deliverables">
+        <h1 class="ui centered huge header">Deliverables</h1>
+    </div>
 
 </div>
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
         crossorigin="anonymous"></script>
-<script async src="semantic/dist/semantic.min.js"></script>
-<script async src="bootstrap/js/bootstrap.min.js"></script>
-<script async src="bootstrap/js/jquery.easing.min.js"></script>
-<script async src="bootstrap/js/scrolling-nav.js"></script>
-<script async src="custom/js/main.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="semantic/dist/semantic.min.js"></script>
+<script src="custom/js/history.min.js"></script>
+<script src="custom/js/main.js"></script>
 </body>

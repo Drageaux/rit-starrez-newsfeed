@@ -1,3 +1,6 @@
-$('#collapse-nav .item').tab();
-$('#topnav .item').tab();
-console.log("test")
+$(document).ready(function () {
+    $('#collapse-nav .item').tab({
+        history: true,
+        historyType: 'hash'
+    })
+});
