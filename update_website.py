@@ -20,7 +20,7 @@ def update_website(g_conn,files,week):
     file = open('index.html','w')
     idx = 0
     for line in lines:
-        if '<h1 class="ui centered huge header">Four-Ups</h1>' in line:
+        if '<h1 class="ui centered huge header">Timesheets</h1>' in line:
             line += html
         file.write(line)
     file.close()
