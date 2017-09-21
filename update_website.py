@@ -4,7 +4,7 @@ import os
 from oauth2client.service_account import ServiceAccountCredentials
 
 def update_website(g_conn,files,week):
-    names = {"Sean_Time":"Sean Klei","Adam_Time":"Adam Audycki","David_Time":"David Thong Nguyen","Matt_Time":"Matt Pitcher"}
+    names = {"Sean_Time":"Sean Klei","Adam_Time":"Adam Audycki","David_Time":"David Thong Nguyen","Matt_Time":"Matt Pitcher","Team_Time":"Team Total"}
     unix = "git pull"
     os.popen(unix).read()
     gsheet = g_conn.open("Team_Time")
@@ -46,7 +46,7 @@ def main():
     credentials = ServiceAccountCredentials.from_json_keyfile_name('credential.json', scope)
     g_conn = gspread.authorize(credentials)
 
-    files = ['Sean_Time', 'Matt_Time', 'David_Time', 'Adam_Time']
+    files = ['Sean_Time', 'Matt_Time', 'David_Time', 'Adam_Time', 'Team_Time']
     update_website(g_conn,files,week)
 
     push_github()
