@@ -8,12 +8,12 @@ def update_website(g_conn,files,week):
     os.popen(unix).read()
     gsheet = g_conn.open("Team_Time")
     wsheet = gsheet.worksheet(str(week)+'-Wk'+str(week))
-    html = '<h3>Week '+str(week)+'</h3><table><tr id=tr-timesheets><th>Team Member</th><th>Accomplished</th><th>Planned</th></tr>'
+    html = '<h3 class=h3-week>Week '+str(week)+'<table><tr class=tr-timesheets><th>Team Member</th><th>Accomplished</th><th>Planned</th></tr>'
     idx = 2
     for f in files:
-        html += '<tr id=tr-timesheets><td>'+f.replace('_',' ')+'</td><td>'+wsheet.cell(idx,2).value+'</td><td>'+wsheet.cell(idx,3).value+'</td></tr>'
+        html += '<tr class=tr-timesheets><td>'+f.replace('_',' ')+'</td><td>'+wsheet.cell(idx,2).value+'</td><td>'+wsheet.cell(idx,3).value+'</td></tr>'
         idx += 1
-    html += '</table>'
+    html += '</table></h3>'
     file = open('index.html','r')
     lines = file.readlines()
     file.close()
