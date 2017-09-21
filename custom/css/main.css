@@ -50,6 +50,7 @@ img#meteor-logo {
 /*Content*/
 #main-content {
     padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 @media screen and (min-width: 768px) {
