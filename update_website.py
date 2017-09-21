@@ -4,6 +4,7 @@ import os
 from oauth2client.service_account import ServiceAccountCredentials
 
 def update_website(g_conn,files,week):
+    names = {"Sean_Time":"Sean Klei","Adam_Time":"Adam Audycki","David_Time":"David Thong Nguyen","Matt_Time":"Matt Pitcher"}
     unix = "git pull"
     os.popen(unix).read()
     gsheet = g_conn.open("Team_Time")
@@ -11,7 +12,7 @@ def update_website(g_conn,files,week):
     html = '<h3 class=h3-week>Week '+str(week)+'<table class="table-timesheets"><tr class="tr-timesheets"><th>Team Member</th><th>Accomplished</th><th>Planned</th></tr>'
     idx = 2
     for f in files:
-        html += '<tr class="tr-timesheets"><td>'+f.replace('_',' ')+'</td><td>'+wsheet.cell(idx,2).value+'</td><td>'+wsheet.cell(idx,3).value+'</td></tr>'
+        html += '<tr class="tr-timesheets"><td>'+names[f].replace('_',' ')+'</td><td>'+wsheet.cell(idx,2).value+'</td><td>'+wsheet.cell(idx,3).value+'</td></tr>'
         idx += 1
     html += '</table></h3>'
     file = open('index.html','r')
@@ -37,14 +38,14 @@ def push_github():
 def main():
     parser = argparse.ArgumentParser(prog='timesheets')
     parser.add_argument('week', type=int)
-        
+
     args = parser.parse_args()
     week = args.week
 
     scope = "https://spreadsheets.google.com/feeds"
     credentials = ServiceAccountCredentials.from_json_keyfile_name('credential.json', scope)
     g_conn = gspread.authorize(credentials)
-        
+
     files = ['Sean_Time', 'Matt_Time', 'David_Time', 'Adam_Time']
     update_website(g_conn,files,week)
 
