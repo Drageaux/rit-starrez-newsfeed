@@ -1,9 +1,36 @@
+.h3-week {
+	font-family:"Arial Black", Gadget, sans-serif;
+	border:1px solid black;
+	border-radius:5px;
+	display:table;
+	padding:5px;
+}
+
+.table-timesheets {
+	padding-top:30px;
+
+}
+
+.top-border-div {
+	border-top:1px solid black;
+}
+
 .tr-timesheets {
 	font-size:14pt;
 }
 
+.tr-timesheets > th {
+	font-family:"Arial Black", Gadget, sans-serif;
+	font-size:13px;
+	padding:6px 45px;
+	text-align:center;
+}
+
 .tr-timesheets > td {
+	font-family:"Arial Black", Gadget, sans-serif;
+	font-size:13px;
 	border:1px solid black;
 	border-radius:5px;
-	padding:5px;
+	padding:6px 45px;
+	text-align:center;
 }
