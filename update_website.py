@@ -8,10 +8,10 @@ def update_website(g_conn,files,week):
     os.popen(unix).read()
     gsheet = g_conn.open("Team_Time")
     wsheet = gsheet.worksheet(str(week)+'-Wk'+str(week))
-    html = '<table><tr><td>Team Member</td><td>Accomplished</td><td>Planned</td></tr>'
+    html = '<table><tr id=tr-timesheets><th>Team Member</th><th>Accomplished</th><th>Planned</th></tr>'
     idx = 2
     for f in files:
-        html += '<tr><td>'+f.replace('_',' ')+'</td><td>'+wsheet.cell(idx,2).value+'</td><td>'+wsheet.cell(idx,3).value+'</td></tr>'
+        html += '<tr id=tr-timesheets><td>'+f.replace('_',' ')+'</td><td>'+wsheet.cell(idx,2).value+'</td><td>'+wsheet.cell(idx,3).value+'</td></tr>'
         idx += 1
     html += '</table>'
     file = open('index.html','r')
