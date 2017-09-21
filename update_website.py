@@ -26,10 +26,10 @@ def update_website(g_conn,files,week):
         file.write(line)
     file.close()
 
-def push_github():
+def push_github(week):
     unix = "git add ."
     os.popen(unix).read()
-    unix = 'git commit -m "script update."'
+    unix = 'git commit -m "script update - week '+week+'"'
     os.popen(unix).read()
     unix = 'git push origin master'
     os.popen(unix).read()
@@ -49,7 +49,7 @@ def main():
     files = ['Sean_Time', 'Matt_Time', 'David_Time', 'Adam_Time', 'Team_Time']
     update_website(g_conn,files,week)
 
-    push_github()
+    push_github(str(week))
 
 
 if __name__ == '__main__':
