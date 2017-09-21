@@ -4,15 +4,16 @@
 	border-radius:5px;
 	display:table;
 	padding:5px;
+	margin-left:auto;
+	margin-right:auto;
 }
 
 .table-timesheets {
-	padding-top:30px;
-
+	margin-top:5px;
 }
 
 .top-border-div {
-	border-top:1px solid black;
+	border-top:1px dotted black;
 }
 
 .tr-timesheets {

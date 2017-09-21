@@ -8,7 +8,7 @@ def update_website(g_conn,files,week):
     unix = "git pull"
     os.popen(unix).read()
     gsheet = g_conn.open("Team_Time")
-    wsheet = gsheet.worksheet(str(week)+'-Wk'+str(week))
+    wsheet = gsheet.worksheet('1-Wk'+str(week))
     html = '<h3 class=h3-week>Week '+str(week)+'<div class="top-border-div"><table class="table-timesheets"><tr class="tr-timesheets"><th>Team Member</th><th>Accomplished</th><th>Planned</th></tr>'
     idx = 2
     for f in files:
