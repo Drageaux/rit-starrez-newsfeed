@@ -35,3 +35,30 @@
 	padding:6px 45px;
 	text-align:center;
 }
+
+
+.table-fourup {
+	
+}
+
+.table-fourup > tbody > tr > td {
+	padding:7.5px;
+	border:1px solid black;
+	border-radius:5px;
+	vertical-align:top;
+}
+
+.table-cell {
+	font-size:12px;
+}
+
+.table-cell > tbody > tr > th {
+	font-size:13px;
+	padding-bottom:6px;
+	text-decoration:underline;
+}
+
+.table-cell > tbody > tr > td {
+	font-family:"Arial", Gadget, sans-serif;
+	vertical-alignalign:top;
+}
