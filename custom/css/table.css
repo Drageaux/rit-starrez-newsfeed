@@ -23,17 +23,21 @@
 }
 
 .tr-timesheets {
-    font-size: 14pt;
+    font-size: 1em;
+}
+
+.tr-timesheets:last-child {
+    font-weight: bold;
 }
 
 .tr-timesheets > th {
-    font-size: 13px;
+    font-size: 1em;
     padding: 6px 45px;
     text-align: center;
 }
 
 .tr-timesheets > td {
-    font-size: 13px;
+    font-size: 1em;
     border: 1px solid rgba(34, 36, 38, .15);
     box-shadow: none;
     border-radius: 5px;
@@ -54,11 +58,11 @@
 }
 
 .table-cell {
-    font-size: 12px;
+    font-size: 1em;
 }
 
 .table-cell > tbody > tr > th {
-    font-size: 13px;
+    font-size: 1em;
     padding-bottom: 6px;
     text-decoration: underline;
 }
