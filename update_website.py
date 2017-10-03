@@ -20,13 +20,12 @@ def update_timesheets(g_conn,files,week):
     file = open('index.html','r')
     lines = file.readlines()
     file.close()
-    file = open('index.html','w')
-    idx = 0
-    for line in lines:
-        if '<h1 class="ui centered huge header">Timesheets</h1>' in line:
-            line += html
-        file.write(line)
-    file.close()
+    with open('index.html','w') as file:
+        idx = 0
+        for line in lines:
+            if '<h1 class="ui centered huge header">Timesheets</h1>' in line:
+                line += html
+            file.write(line)
 
 def update_fourups(g_conn,date):
     gsheet = g_conn.open("FourUps")
@@ -62,14 +61,12 @@ def update_fourups(g_conn,date):
     file = open('index.html','r')
     lines = file.readlines()
     file.close()
-    file = open('index.html','w')
-    idx = 0
-    for line in lines:
-        if '<h1 class="ui centered huge header">Four-Ups</h1>' in line:
-            line += html
-        file.write(line)
-    file.close()
-
+    with open('index.html','w') as file:
+        idx = 0
+        for line in lines:
+            if '<h1 class="ui centered huge header">Four-Ups</h1>' in line:
+                line += html
+            file.write(line)
 
 def push_github(week):
     unix = "git add ."
