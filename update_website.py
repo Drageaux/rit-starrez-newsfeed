@@ -9,7 +9,7 @@ def update_timesheets(g_conn,files,week):
     os.popen(unix).read()
     gsheet = g_conn.open("Team_Time")
     wsheet = gsheet.worksheet('1-Wk'+str(week))
-    html = '<div class="data-week"><h2 class="ui header">Week '+str(week)+'</h2><div class="top-border-div"><table class="table-timesheets"><tr class="tr-timesheets"><th>Team Member</th><th>Accomplished</th><th>Planned</th></tr>'
+    html = '<div class="data-week"><h2 class="ui header">Week '+str(week)+'</h2><div class="top-border-div"><table class="table-timesheets"><tr class="tr-timesheets"><th>Team Member</th><th>Accomplished</th><th>Next Week\'s Plan</th></tr>'
     idx = 2
     for f in files:
         print(f)
