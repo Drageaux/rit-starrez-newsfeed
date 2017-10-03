@@ -82,7 +82,7 @@ def push_github(week):
 
 
 def main():
-    parser = argparse.ArgumentParser(prog='timesheets')
+    parser = argparse.ArgumentParser(prog='update_site')
     parser.add_argument('week', type=int)
     parser.add_argument('date', type=str)
 
