@@ -35,7 +35,7 @@ def update_fourups(g_conn,date):
     #date = fourup[0][0]
     html = '<h3 class="h3-week">'+str(date)+'<div class="top-border-div"><table class="table-fourup">'
     date = fourup[0][0]
-    html = '<div class="data-week data-forup"><h2 class="ui header">'+str(date)+'</h2><div class="top-border-div"><table class="table-fourup">'
+    html = '<div class="data-week data-fourup"><h2 class="ui header">'+str(date)+'</h2><div class="top-border-div"><table class="table-fourup">'
     cells = {'progress':'<table class="table-cell"><tr><th>Progress</th></tr>',
                                 'risks':'<table class="table-cell"><tr><th>Risks</th></tr>',
                                 'plan':'<table class="table-cell"><tr><th>Plan</th></tr>',
