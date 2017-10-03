@@ -81,7 +81,7 @@ def push_github(week):
 def main():
     parser = argparse.ArgumentParser(prog='update_site')
     parser.add_argument('week', type=int)
-    parser.add_argument('date', type=str)
+    parser.add_argument('date', type=str, nargs='?')
 
     args = parser.parse_args()
     week = args.week
