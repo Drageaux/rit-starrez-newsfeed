@@ -12,6 +12,8 @@ def update_timesheets(g_conn,files,week):
     html = '<div class="data-week"><h2 class="ui header">Week '+str(week)+'</h2><div class="top-border-div"><table class="table-timesheets"><tr class="tr-timesheets"><th>Team Member</th><th>Accomplished</th><th>Planned</th></tr>'
     idx = 2
     for f in files:
+        print(f)
+        print(idx)
         html += '<tr class="tr-timesheets"><td>'+names[f].replace('_',' ')+'</td><td>'+wsheet.cell(idx,2).value+'</td><td>'+wsheet.cell(idx,3).value+'</td></tr>'
         idx += 1
     html += '</table></div></div>'
