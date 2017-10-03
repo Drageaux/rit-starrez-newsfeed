@@ -9,12 +9,12 @@ def update_timesheets(g_conn,files,week):
     os.popen(unix).read()
     gsheet = g_conn.open("Team_Time")
     wsheet = gsheet.worksheet('1-Wk'+str(week))
-    html = '<h3 class="h3-week">Week '+str(week)+'<div class="top-border-div"><table class="table-timesheets"><tr class="tr-timesheets"><th>Team Member</th><th>Accomplished</th><th>Planned</th></tr>'
+    html = '<div class="data-week"><h2 class="ui header">Week '+str(week)+'</h2><div class="top-border-div"><table class="table-timesheets"><tr class="tr-timesheets"><th>Team Member</th><th>Accomplished</th><th>Planned</th></tr>'
     idx = 2
     for f in files:
         html += '<tr class="tr-timesheets"><td>'+names[f].replace('_',' ')+'</td><td>'+wsheet.cell(idx,2).value+'</td><td>'+wsheet.cell(idx,3).value+'</td></tr>'
         idx += 1
-    html += '</table></div></h3>'
+    html += '</table></div></div>'
     file = open('index.html','r')
     lines = file.readlines()
     file.close()
@@ -30,8 +30,13 @@ def update_fourups(g_conn,date):
     gsheet = g_conn.open("FourUps")
     wsheet = gsheet.worksheet('FourUps ' + str(date))
     fourup = wsheet.get_all_values()
+<<<<<<< HEAD
     #date = fourup[0][0]
     html = '<h3 class="h3-week">'+str(date)+'<div class="top-border-div"><table class="table-fourup">'
+=======
+    date = fourup[0][0]
+    html = '<div class="data-week"><h2 class="ui header">'+str(date)+'</h2><div class="top-border-div"><table class="table-fourup">'
+>>>>>>> refs/remotes/origin/master
     cells = {'progress':'<table class="table-cell"><tr><th>Progress</th></tr>',
                                 'risks':'<table class="table-cell"><tr><th>Risks</th></tr>',
                                 'plan':'<table class="table-cell"><tr><th>Plan</th></tr>',
@@ -53,7 +58,7 @@ def update_fourups(g_conn,date):
 
     html += '<tr><td>'+cells['progress']+'</td><td>'+cells['risks']+'</td></tr>'
     html += '<tr><td>'+cells['plan']+'</td><td>'+cells['needs']+'</td></tr>'
-    html += '</table></div></h3>'
+    html += '</table></div></div>'
 
     file = open('index.html','r')
     lines = file.readlines()

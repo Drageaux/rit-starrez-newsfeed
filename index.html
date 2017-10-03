@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
 
     <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
-	<link rel="stylesheet" type="text/css" href="./index.css">
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="custom/css/table.css">
     <link rel="stylesheet" type="text/css" href="custom/css/main.css">
 </head>
 
@@ -32,7 +32,7 @@
         </div>
         <div class="collapse navbar-collapse" id="collapse-nav">
             <ul class="nav navbar-nav navbar-right menu">
-                <li class="active item" data-tab="synopsis"><a><i class="home icon"></i>Synopsis</a></li>
+                <li class="active item" data-tab="overview"><a><i class="home icon"></i>Overview</a></li>
                 <li class="item" data-tab="teaminfo"><a><i class="users icon"></i>Team Info</a></li>
                 <li class="item" data-tab="fourups"><a><i class="block layout icon"></i>Four-Ups</a></li>
                 <li class="item" data-tab="timesheets"><a><i class="calendar icon"></i>Timesheets</a></li>
@@ -42,34 +42,59 @@
     </div>
 </nav>
 
-<div id="main-content" class="ui container">
+<div id="main-content">
     <!--Content goes here-->
-    <div class="ui active tab" data-tab="synopsis">
-        <h1 class="ui centered huge header">Project Synopsis</h1>
-        <div class="ui justified text container">
-            <p>
-                A part of every student’s time at a University is choosing where they’re going to
-                be living while they attend classes. Making this decision can be daunting for many students because of
-                the large number of considerations. <a href="https://www.starrez.com/">StarRez</a> was created to make
-                this process as quick and painless as
-                possible, a goal they pursue relentlessly, and provide tools that Universities can offer students to
-                alleviate these concerns. However, despite these tools, there are still cases of students having trouble
-                choosing rooms and have even skipped classes to make sure they choose the right room.
-            </p>
-            <p>
-                That is where this project comes in. With an <strong>airline seat selection process for a floor
-                plan</strong>, StarRez
-                would be one step closer in their pursuit of efficiency and ease of use. This project will allow
-                students to get a quick glance over a floor of a building and determine its availability, location, and
-                room type. Saving students hours of time and allowing them to get back to class. For administrators,
-                this project also includes a toolset that they can use to support the room selection process, including
-                importing a floorplan image, a wizard to walk through the room creation process, and exporting this
-                information to be used by the user.
-            </p>
+    <div class="ui active tab" data-tab="overview">
+        <div class="ui fluid container">
+            <h1 class="ui centered huge header">Project Synopsis</h1>
+            <div class="ui justified text container">
+                <p>
+                    A part of every student’s time at a University is choosing where they’re going to
+                    be living while they attend classes. Making this decision can be daunting for many students because
+                    of
+                    the large number of considerations. <a href="https://www.starrez.com/">StarRez</a> was created to
+                    make
+                    this process as quick and painless as
+                    possible, a goal they pursue relentlessly, and provide tools that Universities can offer students to
+                    alleviate these concerns. However, despite these tools, there are still cases of students having
+                    trouble
+                    choosing rooms and have even skipped classes to make sure they choose the right room.
+                </p>
+                <p>
+                    That is where this project comes in. With an <strong>airline seat selection process for a floor
+                    plan</strong>, StarRez
+                    would be one step closer in their pursuit of efficiency and ease of use. This project will allow
+                    students to get a quick glance over a floor of a building and determine its availability, location,
+                    and
+                    room type. Saving students hours of time and allowing them to get back to class. For administrators,
+                    this project also includes a toolset that they can use to support the room selection process,
+                    including
+                    importing a floorplan image, a wizard to walk through the room creation process, and exporting this
+                    information to be used by the user.
+                </p>
+            </div>
+        </div>
+        <br>
+        <div class="ui fluid container">
+            <h1 class="ui centered huge header">Process & Technology</h1>
+            <div class="ui text container">
+                <div class="ui bulleted list">
+                    <div class="item"><strong>Development Methodology:</strong> Modified Scrum</div>
+                    <div class="item"><strong>Sprint Length:</strong> 2 weeks</div>
+                    <div class="item"><strong>Technology:</strong>
+                        <div class="list">
+                            <div class="item">.NET</div>
+                            <div class="item">Entity Framework</div>
+                            <div class="item">MVC</div>
+                            <div class="item">JavaScript/TypeScript</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="ui tab" data-tab="teaminfo">
+    <div class="ui tab container" data-tab="teaminfo">
         <h1 class="ui centered huge header">Team Info</h1>
         <div class="ui two stackable cards">
             <div class="blue card">
@@ -118,14 +143,61 @@
     </div>
 
 
-    <div class="ui tab" data-tab="fourups">
+    <div class="ui tab container" data-tab="fourups">
         <h1 class="ui centered huge header">Four-Ups</h1>
+<<<<<<< HEAD
 <h3 class="h3-week">9/21/17<div class="top-border-div"><table class="table-fourup"><tr><td><table class="table-cell"><tr><th>Progress</th></tr><tr><td>1. Set up git repo (Adam)</tr></td><tr><td>2. Set up our sprints (Team)</tr></td><tr><td>3. Finalized project plan (Team)</tr></td><tr><td>4. Created domain model (Team)</tr></td><tr><td>5. Dev environment setup (Team)</tr></td><tr><td>6. Training sessions (Team)</tr></td></table></td><td><table class="table-cell"><tr><th>Risks</th></tr><tr><td>1. ASP.NET & MVC uncertainty</tr></td></table></td></tr><tr><td><table class="table-cell"><tr><th>Plan</th></tr><tr><td>1. Play around with ASP.NET / MVC (Team)</tr></td><tr><td>2. UI Design (Team)</tr></td><tr><td>3. Update website (David)</tr></td><tr><td>4. Testing frameworks (Team)</tr></td></table></td><td><table class="table-cell"><tr><th>Needs</th></tr><tr><td>1. Expected output of tool</tr></td><tr><td>2. Sample floor plan(s)</tr></td></table></td></tr></table></div></h3><h3 class="h3-week">9/21/2017<div class="top-border-div"><table class="table-fourup"><tr><td><table class="table-cell"><tr><th>Progress</th></tr><tr><td>1. Set up git repo (Adam)</tr></td><tr><td>2. Set up our sprints (Team)</tr></td><tr><td>3. Finalized project plan (Team)</tr></td><tr><td>4. Created domain model (Team)</tr></td><tr><td>5. Dev environment setup (Team)</tr></td><tr><td>6. Training sessions (Team)</tr></td></table></td><td><table class="table-cell"><tr><th>Risks</th></tr><tr><td>1. ASP.NET & MVC uncertainty</tr></td></table></td></tr><tr><td><table class="table-cell"><tr><th>Plan</th></tr><tr><td>1. Play around with ASP.NET / MVC (Team)</tr></td><tr><td>2. UI Design (Team)</tr></td><tr><td>3. Update website (David)</tr></td><tr><td>4. Testing frameworks (Team)</tr></td></table></td><td><table class="table-cell"><tr><th>Needs</th></tr><tr><td>1. Expected output of tool</tr></td><tr><td>2. Sample floor plan(s)</tr></td></table></td></tr></table></div></h3>
 	</div>
 	
    <div class="ui tab" data-tab="timesheets">
         <h1 class="ui centered huge header">Timesheets</h1>
 <h3 class="h3-week">Week 3<div class="top-border-div"><table class="table-timesheets"><tr class="tr-timesheets"><th>Team Member</th><th>Accomplished</th><th>Planned</th></tr><tr class="tr-timesheets"><td>Sean Klei</td><td>8.5</td><td>5.5</td></tr><tr class="tr-timesheets"><td>Matt Pitcher</td><td>6.5</td><td>9</td></tr><tr class="tr-timesheets"><td>David Thong Nguyen</td><td>4.5</td><td>4.5</td></tr><tr class="tr-timesheets"><td>Adam Audycki</td><td>0</td><td>0</td></tr><tr class="tr-timesheets"><td>Team Total</td><td>19.5</td><td>19</td></tr></table></div></h3><h3 class="h3-week">Week 2<div class="top-border-div"><table class="table-timesheets"><tr class="tr-timesheets"><th>Team Member</th><th>Accomplished</th><th>Planned</th></tr><tr class="tr-timesheets"><td>Sean Klei</td><td>3.75</td><td>8.75</td></tr><tr class="tr-timesheets"><td>Matt Pitcher</td><td>6.5</td><td>5</td></tr><tr class="tr-timesheets"><td>David Thong Nguyen</td><td>3.75</td><td>4.5</td></tr><tr class="tr-timesheets"><td>Adam Audycki</td><td>2.05</td><td>7.25</td></tr><tr class="tr-timesheets"><td>Team Total</td><td>16.05</td><td>25.5</td></tr></table></div></h3><h3 class="h3-week">Week 1<div class="top-border-div"><table class="table-timesheets"><tr class="tr-timesheets"><th>Team Member</th><th>Accomplished</th><th>Planned</th></tr><tr class="tr-timesheets"><td>Sean Klei</td><td>3.5</td><td>2.75</td></tr><tr class="tr-timesheets"><td>Matt Pitcher</td><td>4.5</td><td>6</td></tr><tr class="tr-timesheets"><td>David Thong Nguyen</td><td>3.5</td><td>3</td></tr><tr class="tr-timesheets"><td>Adam Audycki</td><td>3.25</td><td>2</td></tr><tr class="tr-timesheets"><td>Team Total</td><td>14.75</td><td>13.75</td></tr></table></div></h3>
+=======
+<div class="data-week"><h2 class="ui header">9/21/2017</h2><div class="top-border-div"><table class="table-fourup"><tr><td><table class="table-cell"><tr><th>Progress</th></tr><tr><td>1. Set up git repo (Adam)</tr></td><tr><td>2. Set up our sprints (Team)</tr></td><tr><td>3. Finalized project plan (Team)</tr></td><tr><td>4. Created domain model (Team)</tr></td><tr><td>5. Dev environment setup (Team)</tr></td><tr><td>6. Training sessions (Team)</tr></td></table></td><td><table class="table-cell"><tr><th>Risks</th></tr><tr><td>1. ASP.NET & MVC uncertainty</tr></td></table></td></tr><tr><td><table class="table-cell"><tr><th>Plan</th></tr><tr><td>1. Play around with ASP.NET / MVC (Team)</tr></td><tr><td>2. UI Design (Team)</tr></td><tr><td>3. Update website (David)</tr></td><tr><td>4. Testing frameworks (Team)</tr></td></table></td><td><table class="table-cell"><tr><th>Needs</th></tr><tr><td>1. Expected output of tool</tr></td><tr><td>2. Sample floor plan(s)</tr></td></table></td></tr></table></div></div>
+    </div>
+
+    <div class="ui tab" data-tab="timesheets">
+        <h1 class="ui centered huge header">Timesheets</h1>
+<div class="data-week"><h2 class="ui header">Week 2</h2><div class="top-border-div"><table class="table-timesheets"><tr class="tr-timesheets"><th>Team Member</th><th>Accomplished</th><th>Planned</th></tr><tr class="tr-timesheets"><td>Sean Klei</td><td>3.75</td><td>8.75</td></tr><tr class="tr-timesheets"><td>Matt Pitcher</td><td>6.5</td><td>5</td></tr><tr class="tr-timesheets"><td>David Thong Nguyen</td><td>3.75</td><td>4.5</td></tr><tr class="tr-timesheets"><td>Adam Audycki</td><td>2.05</td><td>7.25</td></tr><tr class="tr-timesheets"><td>Team Total</td><td>16.05</td><td>25.5</td></tr></table></div></div><div class="data-week"><h2 class="ui header">Week 1</h2><div class="top-border-div"><table class="table-timesheets"><tr class="tr-timesheets"><th>Team Member</th><th>Accomplished</th><th>Planned</th></tr><tr class="tr-timesheets"><td>Sean Klei</td><td>3.5</td><td>2.75</td></tr><tr class="tr-timesheets"><td>Matt Pitcher</td><td>4.5</td><td>6</td></tr><tr class="tr-timesheets"><td>David Thong Nguyen</td><td>3.5</td><td>3</td></tr><tr class="tr-timesheets"><td>Adam Audycki</td><td>3.25</td><td>2</td></tr><tr class="tr-timesheets"><td>Team Total</td><td>14.75</td><td>13.75</td></tr></table></div></div>
+    </div>
+
+    <div class="ui tab container" data-tab="deliverables">
+        <h1 class="ui centered huge header">Documents</h1>
+        <div class="ui text container">
+            <div class="ui relaxed divided bulleted list">
+                <div class="item">
+                    <div class="content">
+                        <div class="header"><a target="_blank" href="https://docs.google.com/a/g.rit.edu/document/d/1RPgealyDlwbooP7u_tPlDo05pxHZwuM_wuXMME_I9xo/edit?usp=sharing">Project Plan</a></div>
+                        <div class="description">(requires access)</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="content">
+                        <div class="header"><a target="_blank" href="https://drive.google.com/a/g.rit.edu/file/d/0B8XuvFf532YabWFrZjk3WVdhbWM/view?usp=sharing">Domain Model</a></div>
+                        <div class="description">(requires access)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <h1 class="ui centered huge header">
+            <div class="content">
+                Burndown Charts
+            </div>
+            <div class="sub header">Our User Story Points are referred to as "Hours" in the charts</div>
+        </h1>
+        <div class="ui text container">
+            <div class="ui stackable three column grid container" id="burndowns">
+                <div class="column">
+                    <a target="_blank" href="burndowns/sprint1burn.png" class="ui bordered image">
+                        <div class="ui black ribbon label">Sprint 1</div>
+                        <img src="burndowns/sprint1burn.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+>>>>>>> refs/remotes/origin/master
 </div>
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"
