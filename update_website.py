@@ -30,13 +30,10 @@ def update_fourups(g_conn,date):
     gsheet = g_conn.open("FourUps")
     wsheet = gsheet.worksheet('FourUps ' + str(date))
     fourup = wsheet.get_all_values()
-<<<<<<< HEAD
     #date = fourup[0][0]
     html = '<h3 class="h3-week">'+str(date)+'<div class="top-border-div"><table class="table-fourup">'
-=======
     date = fourup[0][0]
     html = '<div class="data-week"><h2 class="ui header">'+str(date)+'</h2><div class="top-border-div"><table class="table-fourup">'
->>>>>>> refs/remotes/origin/master
     cells = {'progress':'<table class="table-cell"><tr><th>Progress</th></tr>',
                                 'risks':'<table class="table-cell"><tr><th>Risks</th></tr>',
                                 'plan':'<table class="table-cell"><tr><th>Plan</th></tr>',
@@ -96,7 +93,8 @@ def main():
 
     files = ['Sean_Time', 'Matt_Time', 'David_Time', 'Adam_Time', 'Team_Time']
     update_timesheets(g_conn,files,week)
-    update_fourups(g_conn,date)
+    if date:
+        update_fourups(g_conn,date)
 
     push_github(str(week))
 
