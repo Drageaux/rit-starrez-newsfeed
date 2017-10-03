@@ -26,11 +26,11 @@ def update_timesheets(g_conn,files,week):
         file.write(line)
     file.close()
 
-def update_fourups(g_conn):
+def update_fourups(g_conn,date):
     gsheet = g_conn.open("FourUps")
-    wsheet = gsheet.worksheet('FourUps')
+    wsheet = gsheet.worksheet('FourUps ' + str(date))
     fourup = wsheet.get_all_values()
-    date = fourup[0][0]
+    #date = fourup[0][0]
     html = '<h3 class="h3-week">'+str(date)+'<div class="top-border-div"><table class="table-fourup">'
     cells = {'progress':'<table class="table-cell"><tr><th>Progress</th></tr>',
                                 'risks':'<table class="table-cell"><tr><th>Risks</th></tr>',
@@ -79,9 +79,11 @@ def push_github(week):
 def main():
     parser = argparse.ArgumentParser(prog='timesheets')
     parser.add_argument('week', type=int)
+    parser.add_argument('date', type=str)
 
     args = parser.parse_args()
     week = args.week
+    date = args.date
 
     scope = "https://spreadsheets.google.com/feeds"
     credentials = ServiceAccountCredentials.from_json_keyfile_name('credential.json', scope)
@@ -89,7 +91,7 @@ def main():
 
     files = ['Sean_Time', 'Matt_Time', 'David_Time', 'Adam_Time', 'Team_Time']
     update_timesheets(g_conn,files,week)
-    #update_fourups(g_conn)
+    update_fourups(g_conn,date)
 
     push_github(str(week))
 
