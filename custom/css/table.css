@@ -9,6 +9,10 @@
     margin-bottom: 20px;
 }
 
+.data-fourup {
+    width: 75%; /* To force the tables of fourups to be the same width */
+}
+
 .data-week .ui.header {
     margin-bottom: 5px;
     margin-top: 5px;
@@ -46,7 +50,7 @@
 }
 
 .table-fourup {
-
+    width: 100%;
 }
 
 .table-fourup > tbody > tr > td {
@@ -55,6 +59,7 @@
     box-shadow: none;
     border-radius: 5px;
     vertical-align: top;
+    width: 50%;
 }
 
 .table-cell {
