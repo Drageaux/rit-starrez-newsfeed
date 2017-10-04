@@ -9,7 +9,7 @@ def update_timesheets(g_conn,files,week):
     os.popen(unix).read()
     gsheet = g_conn.open("Team_Time")
     wsheet = gsheet.worksheet('1-Wk'+str(week))
-    html = '<div class="data-week"><h2 class="ui header">Week '+str(week)+'</h2><div class="top-border-div"><table class="table-timesheets"><tr class="tr-timesheets"><th>Team Member</th><th>Accomplished</th><th>Planned</th></tr>'
+    html = '<div class="data-week"><h2 class="ui header">Week '+str(week)+'</h2><div class="top-border-div"><table class="table-timesheets"><tr class="tr-timesheets"><th>Team Member</th><th>Accomplished</th><th>Next Week\'s Plan</th></tr>'
     idx = 2
     for f in files:
         print(f)
@@ -20,13 +20,12 @@ def update_timesheets(g_conn,files,week):
     file = open('index.html','r')
     lines = file.readlines()
     file.close()
-    file = open('index.html','w')
-    idx = 0
-    for line in lines:
-        if '<h1 class="ui centered huge header">Timesheets</h1>' in line:
-            line += html
-        file.write(line)
-    file.close()
+    with open('index.html','w') as file:
+        idx = 0
+        for line in lines:
+            if '<h1 class="ui centered huge header">Timesheets</h1>' in line:
+                line += html
+            file.write(line)
 
 def update_fourups(g_conn,date):
     gsheet = g_conn.open("FourUps")
@@ -35,7 +34,7 @@ def update_fourups(g_conn,date):
     #date = fourup[0][0]
     html = '<h3 class="h3-week">'+str(date)+'<div class="top-border-div"><table class="table-fourup">'
     date = fourup[0][0]
-    html = '<div class="data-week"><h2 class="ui header">'+str(date)+'</h2><div class="top-border-div"><table class="table-fourup">'
+    html = '<div class="data-week data-fourup"><h2 class="ui header">'+str(date)+'</h2><div class="top-border-div"><table class="table-fourup">'
     cells = {'progress':'<table class="table-cell"><tr><th>Progress</th></tr>',
                                 'risks':'<table class="table-cell"><tr><th>Risks</th></tr>',
                                 'plan':'<table class="table-cell"><tr><th>Plan</th></tr>',
@@ -62,14 +61,12 @@ def update_fourups(g_conn,date):
     file = open('index.html','r')
     lines = file.readlines()
     file.close()
-    file = open('index.html','w')
-    idx = 0
-    for line in lines:
-        if '<h1 class="ui centered huge header">Four-Ups</h1>' in line:
-            line += html
-        file.write(line)
-    file.close()
-
+    with open('index.html','w') as file:
+        idx = 0
+        for line in lines:
+            if '<h1 class="ui centered huge header">Four-Ups</h1>' in line:
+                line += html
+            file.write(line)
 
 def push_github(week):
     unix = "git add ."
